@@ -1,0 +1,264 @@
+/* ==========================================
+   GENERAL BODY STYLING
+   ========================================== */
+body {
+    font-family: 'Arial', sans-serif; /* Clean, easy-to-read font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background: #f6f9f7; 
+    line-height: 1.6; /* Better text readability */
+    color: #333; /* Dark gray text for better contrast */
+}
+
+/* ==========================================
+   HEADER SECTION
+   ========================================== */
+header {
+    position: relative;
+    background-image: url("../images/Header2.jpg");
+    background-size: cover; /* Make image cover entire header */
+    background-position: center;
+    height: 250px; /* Slightly taller header */
+    color: white;
+    padding: 50px 20px 10px 20px;
+    text-align: center;
+   
+}
+
+/* Add dark overlay to make text more readable */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+/* Ensure header content appears above overlay */
+header h1,
+header nav {
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================
+   HEADINGS
+   ========================================== */
+h1 {
+    font-size: 48px;
+    margin: 0 0 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+}
+
+h2 {
+    color: #2e7d32; /* Green color matching the theme */
+    font-size: 36px;
+    margin-top: 30px;
+    border-bottom: 3px solid #66bb6a; /* Underline effect */
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+h3 {
+    color: #388e3c;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Better control than inline */
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+/* ==========================================
+   CONTENT CONTAINERS
+   ========================================== */
+div {
+    padding: 20px;
+}
+
+/* Main content wrapper for better readability */
+.IdeaDe,
+.list {
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 20px auto; /* Center the content */
+    background: white; /* White background for content */
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners */
+    
+}
+
+/* ==========================================
+   RECIPE CARDS (for details page)
+   ========================================== */
+.list > div {
+    background: #f9f9f9; /* Light background for each recipe */
+    border-left: 5px solid #66bb6a; /* Green accent border */
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+/* ==========================================
+   IMAGES
+   ========================================== */
+img {
+    width: 100%;
+    max-width: 400px; /* Limit maximum size */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 20px 0;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* ==========================================
+   LISTS
+   ========================================== */
+ul, ol {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+ul li {
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+/* Style for ordered lists (instructions) */
+ol li {
+    margin: 15px 0;
+    padding-left: 5px;
+    font-weight: 500; /* Slightly bolder for instructions */
+}
+
+/* Category links styling */
+.list ul li a {
+    color: #1976d2; /* Blue color for links */
+    text-decoration: none;
+    font-weight: bold;   
+}
+
+.list ul li a:hover {
+    color: #ff6f00; /* Orange on hover */
+    text-decoration: underline;
+}
+
+/* ==========================================
+   TEXT ELEMENTS
+   ========================================== */
+.IdeaDe p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.list {
+    font-size: 18px;
+}
+
+/* Blockquote styling */
+blockquote {
+    background: #f0f4c3; /* Light yellow background */
+    border-left: 5px solid #cddc39; /* Yellow-green accent */
+    margin: 30px 0;
+    padding: 20px 30px;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+blockquote p {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Emphasis and underline */
+em {
+    color: #f57c00; /* Orange for tips */
+    font-weight: bold;
+}
+
+u {
+    color: #d32f2f; /* Red for important notes */
+    text-decoration: underline;
+}
+
+/* Tips on details page */
+.list p strong {
+    color: #2e7d32;
+    font-size: 20px;
+}
+
+/* ==========================================
+   CONTACT PAGE
+   ========================================== */
+address {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.8;
+    background: #e3f2fd; /* Light blue background */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #2196f3; /* Blue accent */
+}
+
+address a {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    background: #358839;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
